@@ -16,7 +16,7 @@ class TicketSeeder extends Seeder
     {
         $ticket = [
             [
-                'id' => 1,
+                // 'id' => 1,
                 'customer_name' => 'John Smith',
                 'subject' => 'Cant Access My Account',
                 'priority' => 'normal',
@@ -24,7 +24,7 @@ class TicketSeeder extends Seeder
                 'status' => 'pending',
             ],
             [
-                'id' => 2,
+                // 'id' => 2,
                 'customer_name' => 'Sarah Jones',
                 'subject' => 'Can Login And But Cant My Access Dashboard',
                 'priority' => 'urgent',
@@ -32,7 +32,7 @@ class TicketSeeder extends Seeder
                 'status' => 'pending',
             ],
             [
-                'id' => 3,
+                // 'id' => 3,
                 'customer_name' => 'Adefemi Oguns',
                 'subject' => 'Cant Access My Account',
                 'priority' => 'important',

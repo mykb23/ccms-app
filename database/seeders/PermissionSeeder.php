@@ -16,15 +16,15 @@ class PermissionSeeder extends Seeder
     {
         $permissions = [
             [
-                'id'    => 1,
+                // 'id'    => 1,
                 'name' => 'admin_access',
             ],
             [
-                'id'    => 2,
+                // 'id'    => 2,
                 'name' => 'supervisor_access',
             ],
             [
-                'id'    => 3,
+                // 'id'    => 3,
                 'name' => 'ticket_access',
             ],
         ];

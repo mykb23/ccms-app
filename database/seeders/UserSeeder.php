@@ -16,21 +16,21 @@ class UserSeeder extends Seeder
     {
         $users = [
             [
-                'id'             => 1,
+                // 'id'             => 1,
                 'name'           => 'Admin',
                 'email'          => 'admin@admin.com',
                 'password'       => bcrypt('password'),
                 'remember_token' => null,
             ],
             [
-                'id'             => 2,
+                // 'id'             => 2,
                 'name'           => 'Supervisor',
                 'email'          => 'supervisor@supervisor.com',
                 'password'       => bcrypt('password'),
                 'remember_token' => null,
             ],
             [
-                'id'             => 3,
+                // 'id'             => 3,
                 'name'           => 'User',
                 'email'          => 'user@user.com',
                 'password'       => bcrypt('password'),
