@@ -12,15 +12,21 @@ class Index extends Component
     public $perPage = 3;
     public $search = '';
     public $orderBy = 'id';
-    public $orderAsc = true;
+
+    public $defaultOrder = true, $orderAsc;
 
     protected $listeners = ['ticket_closed' => '$refresh', 'delete' => '$refresh'];
 
     public function render()
     {
+        if ($this->orderAsc === "false") {
+            $this->defaultOrder = false;
+        } else {
+            $this->defaultOrder = true;
+        }
         return view('livewire.tickets.index', [
             'tickets' => Ticket::search($this->search)
-                ->orderBy($this->orderBy, $this->orderAsc ? 'asc' : 'desc')
+                ->orderBy($this->orderBy, $this->defaultOrder ? 'asc' : 'desc')
                 ->paginate($this->perPage)
         ]);
     }

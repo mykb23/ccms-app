@@ -9,7 +9,6 @@
                         <x-jet-label for="search" value="{{ __('Search') }}" />
                         <x-jet-input wire:model="search" id="search" class="block w-full" type="text" name="search" />
                     </div>
-                    {{-- @dump($tickets[0]) --}}
                     <div>
                         <x-jet-label for="orderBy" value="{{ __('Sort By') }}" />
                         <select id="orderBy" wire:model.debounce.500ms="orderBy" name="orderBy"
@@ -21,8 +20,14 @@
                             <option value="status">Status</option>
                             <option value="agent_name">Agent Name</option>
                         </select>
-                        {{--
-                        <x-jet-input-error for="priority" /> --}}
+                    </div>
+                    <div class="space-x-0">
+                        <x-jet-label for="orderAsc" value="{{ __('Order By') }}" />
+                        <select id="orderAsc" wire:model="orderAsc" name="orderAsc"
+                            class="border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm block w-full">
+                            <option value="true">Ascending</option>
+                            <option value="false">Descending</option>
+                        </select>
                     </div>
                 </div>
                 <div class="overflow-y-hidden w-full">
