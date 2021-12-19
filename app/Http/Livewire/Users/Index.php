@@ -28,11 +28,7 @@ class Index extends Component
         return view('livewire.users.index', [
             'users' => User::search($this->search)->with('roles')
                 ->orderBy($this->orderBy, $this->defaultOrder ? 'asc' : 'desc')
-                ->paginate($this->perPage),
-            // ->orderBy($this->orderBy,)
-            // 'roles' => Role::search($this->search)
-            //     ->orderBy($this->orderBy, $this->orderAsc ? 'asc' : 'desc')
-            //     ->paginate($this->perPage),
+                ->paginate($this->perPage)
         ]);
     }
 }
